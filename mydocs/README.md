@@ -11,6 +11,7 @@
 | [03-memory-files.md](./03-memory-files.md) | Memory 文件保存方式 |
 | [04-memory-chunk.md](./04-memory-chunk.md) | Chunk 机制、更新逻辑 |
 | [05-agent-system-prompt.md](./05-agent-system-prompt.md) | System Prompt 完整解析 |
+| [06-plugin-vs-skills.md](./06-plugin-vs-skills.md) | Plugin 系统与 Skills 系统对比 |
 
 ## 快速索引
 
@@ -18,6 +19,7 @@
 
 - **Memory 系统** → `02-memory-system.md` + `03-memory-files.md` + `04-memory-chunk.md`
 - **Agent** → `05-agent-system-prompt.md`
+- **Plugin/Skills** → `06-plugin-vs-skills.md`
 - **仓库概览** → `01-repository-overview.md`
 
 ### 关键特性
@@ -28,6 +30,7 @@
 | 文件保存机制 | `03-memory-files.md` |
 | Chunk 分块算法 | `04-memory-chunk.md` |
 | 强制记忆召回 | `05-agent-system-prompt.md` |
+| Plugin vs Skills 架构对比 | `06-plugin-vs-skills.md` |
 
 ## 相关链接
 
@@ -43,8 +46,8 @@
 
 ### 🔴 高优先级
 
-- [ ] **Plugin 系统** — 插件架构、manifest 定义、loader 流程、runtime API (`src/plugins/`, `src/plugin-sdk/`)
-- [ ] **Tools/Skills 系统** — Agent 工具调用机制、Skill 加载与执行流程 (`src/agents/tools/`, `src/skills/`)
+- [x] **Plugin 系统** — 插件架构、manifest 定义、loader 流程、runtime API (`src/plugins/`, `src/plugin-sdk/`)
+- [x] **Tools/Skills 系统** — Agent 工具调用机制、Skill 加载与执行流程 (`src/agents/tools/`, `src/skills/`)
 - [ ] **Channel 模块** — 多平台通讯适配（Telegram/Slack/Discord/iMessage） (`src/channels/`, `src/channels/plugins/`)
 
 ### 🟡 中优先级

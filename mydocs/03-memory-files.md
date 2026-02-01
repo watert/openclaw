@@ -11,9 +11,9 @@ workspace/
 ├── MEMORY.md                    # 主记忆文件（必读）
 ├── memory.md                    # 备选主文件
 └── memory/
-    ├── 2026-01-03-project-kickoff.md
-    ├── 2026-01-15-api-design.md
-    ├── 2026-01-31-user-feedback.md
+    ├── 2026-01-15.md  # 没有 slug 的版本 
+    ├── 2026-01-03.md # 同一个日期可以有多份文件, 根据 -- 后面的 slug 区分
+    ├── 2026-01-03--project-kickoff.md # 有 slug 的版本
     └── ...                      # 按日期组织的记忆文件
 ```
 
