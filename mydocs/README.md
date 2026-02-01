@@ -49,6 +49,7 @@
 
 ### 🔴 高优先级
 
+- [x] **Memory Flush 机制** — 触发条件、Prompt 指令、格式来源 (`src/auto-reply/reply/memory-flush.ts`)
 - [x] **Plugin 系统** — 插件架构、manifest 定义、loader 流程、runtime API (`src/plugins/`, `src/plugin-sdk/`)
 - [x] **Tools/Skills 系统** — Agent 工具调用机制、Skill 加载与执行流程 (`src/agents/tools/`, `src/skills/`)
 - [ ] 自主性是如何实现的？ — 系统提示词中包含 `Allow autonomous actions` 指令， cron job 会触发内存 flush 操作。
