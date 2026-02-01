@@ -13,6 +13,7 @@
 | [05-agent-system-prompt.md](./05-agent-system-prompt.md) | System Prompt 完整解析 |
 | [06-plugin-vs-skills.md](./06-plugin-vs-skills.md) | Plugin 系统与 Skills 系统对比 |
 | [07-commands.md](./07-commands.md) | Commands 模块、CLI 命令、内部运维 API |
+| [08-hooks.md](./08-hooks.md) | Internal Hooks 与 Plugin Hooks 系统对比 |
 
 ## 快速索引
 
@@ -22,6 +23,7 @@
 - **Agent** → `05-agent-system-prompt.md`
 - **Plugin/Skills** → `06-plugin-vs-skills.md`
 - **Commands** → `07-commands.md`
+- **Hooks** → `08-hooks.md`
 - **仓库概览** → `01-repository-overview.md`
 
 ### 关键特性
@@ -49,20 +51,13 @@
 
 ### 🔴 高优先级
 
-- [x] **Memory Flush 机制** — 触发条件、Prompt 指令、格式来源 (`src/auto-reply/reply/memory-flush.ts`)
+- [x] **Memory Flush 机制** — 触发条件、Prompt 指令、格式来源 (`src/auto-reply/reply/memory-flush.ts`)：直接函数调用，非 Hook
 - [x] **Plugin 系统** — 插件架构、manifest 定义、loader 流程、runtime API (`src/plugins/`, `src/plugin-sdk/`)
 - [x] **Tools/Skills 系统** — Agent 工具调用机制、Skill 加载与执行流程 (`src/agents/tools/`, `src/skills/`)
+- [x] **Hooks 系统** — Internal Hooks（事件驱动）与 Plugin Hooks（插件扩展）是两套独立系统，Memory Flush 与它们完全无关
 - [ ] 自主性是如何实现的？ — 系统提示词中包含 `Allow autonomous actions` 指令， cron job 会触发内存 flush 操作。
 - [ ] **Channel 模块** — 多平台通讯适配（Telegram/Slack/Discord/iMessage） (`src/channels/`, `src/channels/plugins/`)
-
-### 🟡 中优先级
-
-- [ ] **Auto-Reply 机制** — 自动回复触发条件、内存 flush 触发逻辑 (`src/auto-reply/`, `src/memory/flush.ts`)
-- [x] **Commands 模块** — CLI 命令 + 内部运维操作 API (`src/commands/`, `src/cli/program/command-registry.ts`)
-- [ ] **Hooks 系统** — 钩子注册、事件触发机制 (`src/hooks/`, `src/hooks/bundled/`)
-
-### 🟢 低优先级
-
-- [ ] **Config 配置** — 配置文件解析、YAML/JSON 配置加载 (`src/config/`)
 - [ ] **Sandbox 沙箱** — 沙箱环境管理、文件系统隔离 (`src/sandbox/`)
+- [ ] **Config 配置** — 配置文件解析、YAML/JSON 配置加载 (`src/config/`)
 - [ ] **Message Queue** — 消息队列、异步处理 (`src/queue/`)
+- [ ] **Auto-Reply 机制** — 自动回复触发条件、内存 flush 触发逻辑 (`src/auto-reply/`, `src/memory/flush.ts`)
